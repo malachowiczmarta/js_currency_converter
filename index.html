@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>przelicznik walut Marta Małachowicz</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="name-container">
+        <i class="fas fa-coins"></i>
+        <h1>Przelicznik walut</h1>
+      </div>
+      <div class="count-conainer">
+        <input type="number" id="money-value" placeholder="Wpisz ilość" />
+        <select name="selectCurrency" id="selectCurrency"></select>
+        <button id="count" onclick="onCountBtnClick()">Przelicz</button>
+        <div class="para-container">
+          <p id="para-result"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
