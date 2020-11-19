@@ -9,7 +9,7 @@ This project was created during my forontend bootcamp. I built this project base
 
 ## Demo
 
-Here is a working demo : https://malachowiczmarta.github.io/js_budget_app/
+Here is a working demo :
 
 ## Screenshots
 
