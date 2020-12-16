@@ -9,7 +9,7 @@ This project was created during my forontend bootcamp. I built this project base
 
 ## Demo
 
-Here is a working demo :
+Here is a working demo : https://malachowiczmarta.github.io/js_currency_converter/
 
 ## Screenshots
 
