@@ -4,7 +4,7 @@ const select = document.getElementById("selectCurrency");
 const loadCurrencyCodeList = async () => {
   try {
     const response = await axios.get(
-      "http://api.nbp.pl/api/exchangerates/tables/a/?format=json"
+      "https://api.nbp.pl/api/exchangerates/tables/a/?format=json"
     );
 
     let codeArr = response.data[0]["rates"];
