@@ -36,7 +36,7 @@ const multiplyTodayValue = async (codetoLowerCase) => {
 
   try {
     const response = await axios.get(
-      `http://api.nbp.pl/api/exchangerates/rates/a/${codetoLowerCase}/today/`
+      `https://api.nbp.pl/api/exchangerates/rates/a/${codetoLowerCase}/today/`
     );
 
     paragraph.innerText = multiplyValue(response, inputMoneyValue);
@@ -57,7 +57,7 @@ const multiplyLastValue = async (codetoLowerCase) => {
   const inputMoneyValue = inputMoney.value;
   try {
     const response = await axios.get(
-      `http://api.nbp.pl/api/exchangerates/rates/a/${codetoLowerCase}/`
+      `https://api.nbp.pl/api/exchangerates/rates/a/${codetoLowerCase}/`
     );
     paragraph.innerText = multiplyValue(response, inputMoneyValue);
   } catch (error) {
@@ -70,6 +70,16 @@ window.onload = () => {
 };
 
 function onCountBtnClick() {
+
+  let inputMoney = document.getElementById("money-value");
+  let inputMoneyValue = inputMoney.value;
+
+  if (inputMoneyValue <= 0) {
+    let validationPara = document.getElementById("para-result");
+    validationPara.innerText = "Wpisz liczbę większą od zera!"
+    return;
+  }
+
   let codetoLowerCase = targetCurrency.toLowerCase();
   multiplyTodayValue(codetoLowerCase);
 }
